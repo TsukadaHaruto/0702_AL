@@ -16,9 +16,6 @@
     <Filter Include="シェーダー ファイル">
       <UniqueIdentifier>{718c7f4c-fc51-40ad-a221-b9456a7a1a3c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\3d">
-      <UniqueIdentifier>{8ccef709-d514-43f7-ad35-629a9edd5057}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ヘッダー ファイル\2d">
       <UniqueIdentifier>{96135050-efba-425e-a9fe-8881bd7caad8}</UniqueIdentifier>
     </Filter>
@@ -58,11 +55,11 @@
     <Filter Include="ヘッダー ファイル\actor">
       <UniqueIdentifier>{e99f1c3c-9c66-441d-974d-9f22a6de1b6b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\scene\3d">
+      <UniqueIdentifier>{8ccef709-d514-43f7-ad35-629a9edd5057}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="base\DirectXCommon.cpp">
       <Filter>ソース ファイル\base</Filter>
     </ClCompile>
@@ -81,40 +78,46 @@
     <ClCompile Include="math\MathUtilityForText.cpp">
       <Filter>ソース ファイル\math</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMath.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldTransformEx.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3d\ViewProjection.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="3d\WorldTransform.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\CircleShadow.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\DebugCamera.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\DirectionalLight.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\LightGroup.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\Material.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\Model.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\Mesh.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\PointLight.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\SpotLight.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="2d\Sprite.h">
       <Filter>ヘッダー ファイル\2d</Filter>
@@ -130,9 +133,6 @@
     </ClInclude>
     <ClInclude Include="base\WinApp.h">
       <Filter>ヘッダー ファイル\base</Filter>
-    </ClInclude>
-    <ClInclude Include="scene\GameScene.h">
-      <Filter>ヘッダー ファイル\scene</Filter>
     </ClInclude>
     <ClInclude Include="input\Input.h">
       <Filter>ヘッダー ファイル\input</Filter>
@@ -150,16 +150,16 @@
       <Filter>ヘッダー ファイル\math</Filter>
     </ClInclude>
     <ClInclude Include="3d\AxisIndicator.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\PrimitiveDrawer.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\Terrain.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="3d\TerrainCommon.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="2d\ImGuiManager.h">
       <Filter>ヘッダー ファイル\2d</Filter>
@@ -168,13 +168,22 @@
       <Filter>ヘッダー ファイル\base</Filter>
     </ClInclude>
     <ClInclude Include="3d\ObjectColor.h">
-      <Filter>ヘッダー ファイル\3d</Filter>
+      <Filter>ソース ファイル\scene\3d</Filter>
     </ClInclude>
     <ClInclude Include="actor\Player.h">
       <Filter>ヘッダー ファイル\actor</Filter>
     </ClInclude>
     <ClInclude Include="math\MathUtilityForText.h">
       <Filter>ヘッダー ファイル\math</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMath.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="3d\WorldTransform.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
