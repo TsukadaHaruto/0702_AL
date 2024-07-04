@@ -27,12 +27,17 @@ public:
 	// 親となるワールド変換へのポインタ
 	const WorldTransform* parent_ = nullptr;
 
+	WorldTransform() = default;
 	~WorldTransform() = default;
 
 	/// <summary>
 	/// 初期化
 	/// </summary>
 	void Initialize();
+	/// <summary>
+	///	更新処理
+	/// </summary>
+	void UpdateMatrix();
 	/// <summary>
 	/// 定数バッファ生成
 	/// </summary>
@@ -50,7 +55,7 @@ public:
 	/// </summary>
 	/// <returns>定数バッファ</returns>
 	const Microsoft::WRL::ComPtr<ID3D12Resource>& GetConstBuffer() const { return constBuffer_; }
-	void UpdateMatrix();
+public:
 
 private:
 	// 定数バッファ
