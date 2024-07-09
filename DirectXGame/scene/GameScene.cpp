@@ -26,6 +26,7 @@ GameScene::~GameScene() {
 		input_ = Input::GetInstance();
 		audio_ = Audio::GetInstance();
 
+
 		//カメラの生成
 		debugCamera_ = new DebugCamera(WinApp::kWindowWidth, WinApp::kWindowHeight);
 		cameraMarix_ = MatrixMath::MakeAffineMatrix(
