@@ -1,15 +1,14 @@
 #pragma once
 
 #include "Audio.h"
+#include "DebugCamera.h"
 #include "DirectXCommon.h"
 #include "Input.h"
 #include "Model.h"
+#include "Skydome.h"
 #include "Sprite.h"
 #include "ViewProjection.h"
 #include "WorldTransform.h"
-#include "DebugCamera.h"
-#include "skydome.h"
-
 #include <vector>
 
 /// <summary>
@@ -51,18 +50,26 @@ private: // メンバ変数
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
-	
+	// テクスチャハンドル
+	uint32_t textureHandle_ = 0;
+	// 3Dモデル
+	Model* model_ = nullptr;
+	Model* modelBlock_ = nullptr;
+	Model* modelSkydome_ = nullptr;
+	// ワールドトランスフォーム
+	WorldTransform worldTransform_;
+	// ビュープロジェクション
 	ViewProjection viewProjection_;
 
-	Sprite sprite_;
-	bool isDebugCameraActive_ = false;
-	DebugCamera* debugCamera_ = nullptr;
-	Matrix4x4 cameraMarix_;
-	Model* modelBlock_ = nullptr;
+
+	// 縦横ブロック配列
 	std::vector<std::vector<WorldTransform*>> worldTransformBlocks_;
 
-		// 天球
-	Skydome* skydome_ = nullptr;
-	// 3Dモデル
-	Model* modelSkydome_ = nullptr;
+	// デバッグカメラ有効
+	bool isDebugCameraActive_ = false;
+	// デバッグカメラ
+	DebugCamera* debugCamera_ = nullptr;
+
+	// 天球
+	Skydome* skydome_;
 };
