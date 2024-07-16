@@ -9,6 +9,7 @@ GameScene::GameScene() {}
 GameScene::~GameScene() {
 
 	delete modelBlock_;
+	delete modelSkydome_;
 
 	for (std::vector<WorldTransform*>& worldTransformBlockLine : worldTransformBlocks_) {
 		for (WorldTransform* worldTransformBlock : worldTransformBlockLine) {
@@ -25,6 +26,13 @@ GameScene::~GameScene() {
 		dxCommon_ = DirectXCommon::GetInstance();
 		input_ = Input::GetInstance();
 		audio_ = Audio::GetInstance();
+
+			// 天球の生成
+	    skydome_ = new Skydome();
+	    // 天球3Dモデルの生成
+	    modelSkydome_ = Model::CreateFromOBJ("sphere", true);
+	    // 天球の初期化
+	    skydome_->Initialize(modelSkydome_, &viewProjection_);
 
 
 		//カメラの生成

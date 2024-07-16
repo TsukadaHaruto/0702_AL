@@ -60,4 +60,9 @@ private: // メンバ変数
 	Matrix4x4 cameraMarix_;
 	Model* modelBlock_ = nullptr;
 	std::vector<std::vector<WorldTransform*>> worldTransformBlocks_;
+
+		// 天球
+	Skydome* skydome_ = nullptr;
+	// 3Dモデル
+	Model* modelSkydome_ = nullptr;
 };
