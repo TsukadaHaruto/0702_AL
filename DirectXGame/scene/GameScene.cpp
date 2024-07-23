@@ -1,6 +1,8 @@
 #include "GameScene.h"
 #include "TextureManager.h"
+#include "myMath.h"
 #include <cassert>
+#include <map>
 
 GameScene::GameScene() {}
 
@@ -17,6 +19,9 @@ GameScene::~GameScene() {
 	worldTransformBlocks_.clear();
 
 	delete debugCamera_;
+
+	delete mapChipField_;
+	delete modelPlayer_;
 }
 
 void GameScene::Initialize() {
@@ -31,35 +36,47 @@ void GameScene::Initialize() {
 	model_ = Model::Create();
 	modelBlock_ = Model::Create();
 	modelSkydome_ = Model::CreateFromOBJ("sphere", true);
+	modelPlayer_ = Model::CreateFromOBJ("player", true);
 	// ワールドトランスフォームの初期化
 	worldTransform_.Initialize();
 	// ビュープロジェクションの初期化
 	viewProjection_.Initialize();
-	// 要素数
-	const uint32_t kNumBlockVirtical = 10;
-	const uint32_t kNumBlockHorizontal = 20;
-	// ブロック1個分の横幅
-	const float kBlockWidth = 2.0f;
-	const float kBlockHeight = 2.0f;
-	// 要素数を変更する
-	worldTransformBlocks_.resize(kNumBlockVirtical);
 
-	// キューブの生成
-	for (uint32_t i = 0; i < kNumBlockVirtical; ++i) {
-		worldTransformBlocks_[i].resize(kNumBlockHorizontal);
-	}
+	// 自キャラの生成
+	player_ = new Player();
 
-	for (uint32_t i = 0; i < kNumBlockVirtical; ++i) {
-		for (uint32_t j = 0; j < kNumBlockHorizontal; ++j) {
-			if (j % 2 == (i % 2)) {
-				worldTransformBlocks_[i][j] = new WorldTransform();
-				worldTransformBlocks_[i][j]->Initialize();
-				worldTransformBlocks_[i][j]->translation_.x = kBlockWidth * j;
-				worldTransformBlocks_[i][j]->translation_.y = kBlockHeight * i;
-			} else {
-				worldTransformBlocks_[i][j] = nullptr;
-			}
+	Vector3 playerPosition = mapChipField_->GetMapChipPositionByIndex(2, 18);
+
+	// 自キャラの初期化
+	player_->Initialize(modelPlayer_, playerPosition, &viewProjection_);
+
+	{
+		// 要素数
+		/*const uint32_t kNumBlockVirtical = 10;
+		const uint32_t kNumBlockHorizontal = 20;*/
+		// ブロック1個分の横幅
+		/*const float kBlockWidth = 2.0f;
+		const float kBlockHeight = 2.0f;*/
+		// 要素数を変更する
+		/*worldTransformBlocks_.resize(kNumBlockVirtical);*/
+
+		// キューブの生成
+		/*for (uint32_t i = 0; i < kNumBlockVirtical; ++i) {
+		    worldTransformBlocks_[i].resize(kNumBlockHorizontal);
 		}
+
+		for (uint32_t i = 0; i < kNumBlockVirtical; ++i) {
+		    for (uint32_t j = 0; j < kNumBlockHorizontal; ++j) {
+		        if (j % 2 == (i % 2)) {
+		            worldTransformBlocks_[i][j] = new WorldTransform();
+		            worldTransformBlocks_[i][j]->Initialize();
+		            worldTransformBlocks_[i][j]->translation_.x = kBlockWidth * j;
+		            worldTransformBlocks_[i][j]->translation_.y = kBlockHeight * i;
+		        } else {
+		            worldTransformBlocks_[i][j] = nullptr;
+		        }
+		    }
+		}*/
 	}
 
 	// デバッグカメラの生成
@@ -68,6 +85,31 @@ void GameScene::Initialize() {
 	// 天球
 	skydome_ = new Skydome();
 	skydome_->Initialize(modelSkydome_, &viewProjection_);
+
+	// マップチップ
+	mapChipField_ = new MapChipField;
+	mapChipField_->LoadMapChipCsv("Resources/map.csv");
+	GenerateBlocks();
+}
+
+void GameScene::GenerateBlocks() {
+	uint32_t numBlockVirtical = mapChipField_->GetNumBlockVirtical();
+	uint32_t numBlockHorizontal = mapChipField_->GetNumBlockHorizontal();
+
+	worldTransformBlocks_.resize(numBlockVirtical);
+	for (uint32_t i = 0; i < numBlockVirtical; ++i) {
+		worldTransformBlocks_[i].resize(numBlockHorizontal);
+	}
+	for (uint32_t i = 0; i < numBlockVirtical; ++i) {
+		for (uint32_t j = 0; j < numBlockHorizontal; ++j) {
+			if (mapChipField_->GetMapChipTypeByIndex(j, i) == MapChipType::kBlock) {
+				WorldTransform* worldTransform = new WorldTransform();
+				worldTransform->Initialize();
+				worldTransformBlocks_[i][j] = worldTransform;
+				worldTransformBlocks_[i][j]->translation_ = mapChipField_->GetMapChipPositionByIndex(j, i);
+			}
+		}
+	}
 }
 
 void GameScene::Update() {
@@ -94,6 +136,9 @@ void GameScene::Update() {
 		viewProjection_.UpdateMatrix();
 	}
 
+	// 自キャラの更新
+	player_->Update();
+
 	// 縦横ブロック更新
 	for (std::vector<WorldTransform*> worldTransformBlockTate : worldTransformBlocks_) {
 		for (WorldTransform* worldTransformBlockYoko : worldTransformBlockTate) {
@@ -102,6 +147,8 @@ void GameScene::Update() {
 
 			// アフィン変換行列の作成
 			worldTransformBlockYoko->UpdateMatrix();
+
+			worldTransformBlockYoko->TransferMatrix();
 		}
 	}
 
@@ -137,11 +184,10 @@ void GameScene::Draw() {
 	/// </summary>
 	// 3Dモデル描画
 	//	model_->Draw(worldTransform_, viewProjection_, textureHandle_);
-	model_->Draw(worldTransform_, viewProjection_);
 	// 自キャラの描画
 	//	player_->Draw();
 	skydome_->Draw();
-
+	player_->Draw();
 	// 縦横ブロック描画
 	for (std::vector<WorldTransform*> worldTransformBlockTate : worldTransformBlocks_) {
 		for (WorldTransform* worldTransformBlockYoko : worldTransformBlockTate) {
