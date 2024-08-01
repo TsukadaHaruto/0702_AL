@@ -1,10 +1,2 @@
-﻿  main.cpp
-  MapChipField.cpp
-  myMath.cpp
-  GameScene.cpp
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,33): error C2039: 'string': 'std' のメンバーではありません
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,22): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,39): error C2143: 構文エラー: ',' が '&' の前にありません。
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.cpp(31,20): error C2511: 'void MapChipField::LoadMapChipCsv(const std::string &)': オーバーロードされたメンバー関数が 'MapChipField' にありません。
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.cpp(47,2): error C2352: 'MapChipField::ResetMapChipData': 非静的メンバー関数の呼び出しにはオブジェクトが必要です
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(133,2): error C2065: 'player_': 定義されていない識別子です。
+﻿GameScene.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl WorldTransform::UpdateMatrix(void)" (?UpdateMatrix@WorldTransform@@QEAAXXZ) が関数 "public: void __cdecl GameScene::Update(void)" (?Update@GameScene@@QEAAXXZ) で参照されました
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\..\Generated\Outputs\Debug\DirectXGame.exe : fatal error LNK1120: 1 件の未解決の外部参照

@@ -1,0 +1,22 @@
+﻿  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\TerrainPS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\TerrainVS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\ObjPS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\ObjVS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\PrimitivePS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\PrimitiveVS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\ShapePS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\ShapeVS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\SpritePS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Release\SpriteVS.cso
+  ImGuiManager.cpp
+  DirectXCommon.cpp
+  WinApp.cpp
+  main.cpp
+  MapChipField.cpp
+  MatrixMath.cpp
+  myMath.cpp
+  Player.cpp
+  GameScene.cpp
+  skydome.cpp
+GameScene.obj : error LNK2001: 外部シンボル "public: void __cdecl WorldTransform::UpdateMatrix(void)" (?UpdateMatrix@WorldTransform@@QEAAXXZ) は未解決です
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\..\Generated\Outputs\Release\DirectXGame.exe : fatal error LNK1120: 1 件の未解決の外部参照

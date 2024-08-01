@@ -40,10 +40,10 @@ void GameScene::Initialize() {
 	// ビュープロジェクションの初期化
 	viewProjection_.Initialize();
 
-	//// 自キャラの生成
-	//player_ = new Player();
-	//// 自キャラの初期化
-	//player_->Initialize(model_, textureHandle_, &viewProjection_);
+	// 自キャラの生成
+	player_ = new Player();
+	// 自キャラの初期化
+	player_->Initialize(model_, textureHandle_, &viewProjection_);
 
 	// 要素数
 	const uint32_t kNumBlockVirtical = 10;
