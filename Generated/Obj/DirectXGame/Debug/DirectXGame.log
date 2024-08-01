@@ -1,9 +1,4 @@
-﻿  WorldTransform.cpp
-  main.cpp
-  MapChipField.cpp
-  myMath.cpp
-  GameScene.cpp
-  WorldTransformEX.cpp
+﻿  MapChipField.cpp
 C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,33): error C2039: 'string': 'std' のメンバーではありません
 C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,22): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
 C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,39): error C2143: 構文エラー: ',' が '&' の前にありません。
