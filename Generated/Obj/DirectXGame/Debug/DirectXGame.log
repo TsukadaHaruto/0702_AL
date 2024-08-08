@@ -1,3 +1,9 @@
-﻿  GameScene.cpp
+﻿  ImGuiManager.cpp
+  WorldTransform.cpp
+  DirectXCommon.cpp
+  WinApp.cpp
+  main.cpp
+  MatrixMath.cpp
+  GameScene.cpp
   skydome.cpp
   DirectXGame.vcxproj -> C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\DirectXGame.exe
