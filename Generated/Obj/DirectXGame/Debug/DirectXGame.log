@@ -11,6 +11,7 @@
   ImGuiManager.cpp
   DirectXCommon.cpp
   WinApp.cpp
+  CameraController.cpp
   main.cpp
   MapChipField.cpp
   myMath.cpp
