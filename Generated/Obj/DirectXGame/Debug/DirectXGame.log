@@ -1,22 +1,2 @@
-﻿  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\TerrainPS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\TerrainVS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\ObjPS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\ObjVS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\PrimitivePS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\PrimitiveVS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\ShapePS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\ShapeVS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\SpritePS.cso
-  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\SpriteVS.cso
-  ImGuiManager.cpp
-  DirectXCommon.cpp
-  WinApp.cpp
-  CameraController.cpp
-  main.cpp
-  MapChipField.cpp
-  myMath.cpp
-  Player.cpp
-  GameScene.cpp
-  Skydome.cpp
-  WorldTransformEX.cpp
+﻿  main.cpp
   DirectXGame.vcxproj -> C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\DirectXGame.exe
