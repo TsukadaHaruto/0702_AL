@@ -1,16 +1,38 @@
-﻿  ImGuiManager.cpp
-  WorldTransform.cpp
+﻿  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\TerrainPS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\TerrainVS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\ObjPS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\ObjVS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\PrimitivePS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\PrimitiveVS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\ShapePS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\ShapeVS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\SpritePS.cso
+  compilation object save succeeded; see C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\SpriteVS.cso
+  ImGuiManager.cpp
   DirectXCommon.cpp
   WinApp.cpp
+  CameraController.cpp
   main.cpp
   MapChipField.cpp
-  MatrixMath.cpp
   myMath.cpp
-  player.cpp
+  Player.cpp
   GameScene.cpp
-  skydome.cpp
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,33): error C2039: 'string': 'std' のメンバーではありません
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,22): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,39): error C2143: 構文エラー: ',' が '&' の前にありません。
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.cpp(31,20): error C2511: 'void MapChipField::LoadMapChipCsv(const std::string &)': オーバーロードされたメンバー関数が 'MapChipField' にありません。
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.cpp(47,2): error C2352: 'MapChipField::ResetMapChipData': 非静的メンバー関数の呼び出しにはオブジェクトが必要です
+  Skydome.cpp
+  WorldTransformEX.cpp
+  コード生成しています。
+  951 of 1948 functions (48.8%) were compiled, the rest were copied from previous compilation.
+    765 functions were new in current compilation
+    92 functions had inline decision re-evaluated but remain unchanged
+  コード生成が終了しました。
+ImGuiManager.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+main.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+main.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+main.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+myMath.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+Player.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+WorldTransformEX.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+WorldTransformEX.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+LINK : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+KamataEngineLib.lib(Material.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+KamataEngineLib.lib(Material.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
+  DirectXGame.vcxproj -> C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Release\DirectXGame.exe

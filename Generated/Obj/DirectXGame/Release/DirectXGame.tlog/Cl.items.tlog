@@ -1,5 +1,11 @@
 C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\2d\ImGuiManager.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\ImGuiManager.obj
 C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\base\DirectXCommon.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\DirectXCommon.obj
 C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\base\WinApp.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\WinApp.obj
+C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\CameraController.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\CameraController.obj
 C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\main.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\main.obj
+C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\MapChipField.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\MapChipField.obj
+C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\myMath.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\myMath.obj
+C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\Player.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\Player.obj
 C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\scene\GameScene.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\GameScene.obj
+C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\Skydome.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\Skydome.obj
+C:\Users\zhong\Desktop\AL3new\0702_AL\DirectXGame\WorldTransformEX.cpp;C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Obj\DirectXGame\Release\WorldTransformEX.obj
