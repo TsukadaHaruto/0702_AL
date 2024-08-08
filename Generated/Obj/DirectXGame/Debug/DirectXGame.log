@@ -1,2 +1,18 @@
-﻿GameScene.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl WorldTransform::UpdateMatrix(void)" (?UpdateMatrix@WorldTransform@@QEAAXXZ) が関数 "public: void __cdecl GameScene::Update(void)" (?Update@GameScene@@QEAAXXZ) で参照されました
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\..\Generated\Outputs\Debug\DirectXGame.exe : fatal error LNK1120: 1 件の未解決の外部参照
+﻿  ImGuiManager.cpp
+  MapChipField.cpp
+  Player.cpp
+  DirectXCommon.cpp
+  WinApp.cpp
+  main.cpp
+  MatrixMath.cpp
+  myMath.cpp
+  GameScene.cpp
+  skydome.cpp
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(70,51): error C2039: 'GetNumBlockVirtical': 'MapchipField' のメンバーではありません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(70,17): error C2737: 'numBlockVirtical': const オブジェクトを初期化する必要があります
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(71,53): error C2039: 'GetNumBlockHorizontal': 'MapchipField' のメンバーではありません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(71,17): error C2737: 'numBlockHorizontal': const オブジェクトを初期化する必要があります
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(73,14): error C2374: 'kBlockWidth': 再定義されています。2 回以上初期化されています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(74,14): error C2374: 'kBlockHight': 再定義されています。2 回以上初期化されています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.cpp(3,11): error C2084: 関数 'Matrix4x4 MakeAffineMatrix(const Vector3 &,const Vector3 &,const Vector3 &)' は既に本体を持っています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.cpp(46,11): error C2084: 関数 'Matrix4x4 Multiply(const Matrix4x4 &,const Matrix4x4 &)' は既に本体を持っています。
