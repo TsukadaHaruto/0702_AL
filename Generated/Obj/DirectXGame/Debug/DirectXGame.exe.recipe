@@ -2,39 +2,39 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\DirectXGame.exe</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\DirectXGame.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\TerrainPS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\TerrainPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\TerrainVS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\TerrainVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\ObjPS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\ObjPS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\ObjVS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\ObjVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\PrimitivePS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\PrimitivePS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\PrimitiveVS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\PrimitiveVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\ShapePS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\ShapePS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\ShapeVS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\ShapeVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\SpritePS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\SpritePS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\zhong\Desktop\AL\0702_AL\Generated\Outputs\Debug\SpriteVS.cso</FullPath>
+      <FullPath>C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\SpriteVS.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
