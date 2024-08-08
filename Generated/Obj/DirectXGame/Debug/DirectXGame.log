@@ -1,8 +1,2 @@
-﻿  CameraController.cpp
-  MapChipField.cpp
-  Player.cpp
-  WorldTransformEX.cpp
-  main.cpp
-  myMath.cpp
-  GameScene.cpp
+﻿  main.cpp
   DirectXGame.vcxproj -> C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\DirectXGame.exe
