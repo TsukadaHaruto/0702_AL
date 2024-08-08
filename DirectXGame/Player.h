@@ -1,32 +1,24 @@
-﻿#pragma once
-#include "Model.h"
+﻿#include "Model.h"
+#include "ViewProjection.h"
 #include "WorldTransform.h"
+/// 自キャラ
 
 class Player {
 public:
-	Player();
-	~Player();
-
-	/// <summary>
-	/// 初期化
-	/// </summary>
-	/// <param name="model">モデル</param>
-	/// <param name="textureHandle">テクスチャーハンドル</param>
+	// 初期化
 	void Initialize(Model* model, uint32_t textureHandle, ViewProjection* viewProjection);
-
-	/// <summary>
-	/// アップデート
-	/// </summary>
+	// 更新
 	void Update();
-
-	/// <summary>
-	/// 描画
-	/// </summary>
+	// 描画
 	void Draw();
 
 private:
+	// ワールド変換
 	WorldTransform worldTransform_;
+	// モデル
 	Model* model_ = nullptr;
+	// テクスチャハンドル
 	uint32_t textureHandle_ = 0u;
+
 	ViewProjection* viewProjection_ = nullptr;
 };

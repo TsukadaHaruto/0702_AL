@@ -1,18 +1,568 @@
-﻿  ImGuiManager.cpp
+﻿  main.cpp
   MapChipField.cpp
-  Player.cpp
-  DirectXCommon.cpp
-  WinApp.cpp
-  main.cpp
-  MatrixMath.cpp
   myMath.cpp
+  Player.cpp
   GameScene.cpp
   skydome.cpp
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(70,51): error C2039: 'GetNumBlockVirtical': 'MapchipField' のメンバーではありません
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(70,17): error C2737: 'numBlockVirtical': const オブジェクトを初期化する必要があります
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(71,53): error C2039: 'GetNumBlockHorizontal': 'MapchipField' のメンバーではありません
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(71,17): error C2737: 'numBlockHorizontal': const オブジェクトを初期化する必要があります
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(73,14): error C2374: 'kBlockWidth': 再定義されています。2 回以上初期化されています。
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\scene\GameScene.cpp(74,14): error C2374: 'kBlockHight': 再定義されています。2 回以上初期化されています。
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.cpp(3,11): error C2084: 関数 'Matrix4x4 MakeAffineMatrix(const Vector3 &,const Vector3 &,const Vector3 &)' は既に本体を持っています。
-C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.cpp(46,11): error C2084: 関数 'Matrix4x4 Multiply(const Matrix4x4 &,const Matrix4x4 &)' は既に本体を持っています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,33): error C2039: 'string': 'std' のメンバーではありません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,22): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.h(25,39): error C2143: 構文エラー: ',' が '&' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.cpp(31,20): error C2511: 'void MapChipField::LoadMapChipCsv(const std::string &)': オーバーロードされたメンバー関数が 'MapChipField' にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\MapChipField.cpp(47,2): error C2352: 'MapChipField::ResetMapChipData': 非静的メンバー関数の呼び出しにはオブジェクトが必要です
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,11): error C2146: 構文エラー: ';' が、識別子 'MakeAffineMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateXMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateYMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateZMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,11): error C2146: 構文エラー: ';' が、識別子 'Multiply' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,11): error C2146: 構文エラー: ';' が、識別子 'MakeAffineMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateXMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateYMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateZMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,11): error C2146: 構文エラー: ';' が、識別子 'Multiply' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,12): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,25): warning C4508: 'GameScene': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,9): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,9): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,19): error C2065: 'WorldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,34): error C2059: 構文エラー: '>'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,37): error C2530: 'worldTransformBlockLine': 参照が初期化されずに宣言されています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,61): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,63): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,84): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(14,8): error C2065: 'WorldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,12): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(14,24): error C2065: 'worldTransformBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(14,44): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,25): warning C4508: 'GameScene': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(14,69): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(15,11): error C2065: 'worldTransformBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(15,4): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(19,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,9): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,9): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,9): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,9): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(24,1): warning C4508: '{dtor}': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,19): error C2065: 'WorldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,34): error C2059: 構文エラー: '>'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,37): error C2530: 'worldTransformBlockLine': 参照が初期化されずに宣言されています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(26,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,61): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,2): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,63): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,14): error C2653: 'DirectXCommon': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,84): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(14,8): error C2065: 'WorldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,29): error C3861: 'GetInstance': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(14,24): error C2065: 'worldTransformBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(29,2): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(14,44): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(30,2): error C2065: 'audio_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(14,69): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(33,2): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(15,11): error C2065: 'worldTransformBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,2): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(15,4): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,11): error C2653: 'Model': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(19,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,18): error C3861: 'Create': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,9): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,2): error C2065: 'modelBlock_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,16): error C2653: 'Model': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,23): error C3861: 'Create': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,9): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,2): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,18): error C2653: 'Model': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,25): error C3861: 'CreateFromOBJ': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(24,1): warning C4508: '{dtor}': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(39,2): error C2065: 'worldTransform_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(26,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(41,2): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,2): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,16): error C2061: 構文エラー: 識別子 'Player'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,14): error C2653: 'DirectXCommon': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,29): error C3861: 'GetInstance': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,22): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(29,2): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,30): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(30,2): error C2065: 'audio_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,47): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(33,2): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(55,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,2): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(59,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,11): error C2653: 'Model': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,18): error C3861: 'Create': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,2): error C2065: 'modelBlock_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,39): error C2061: 構文エラー: 識別子 'WorldTransform'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,16): error C2653: 'Model': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(66,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,23): error C3861: 'Create': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(67,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,2): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,18): error C2653: 'Model': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(68,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(70,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,25): error C3861: 'CreateFromOBJ': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,2): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(39,2): error C2065: 'worldTransform_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,21): error C2061: 構文エラー: 識別子 'DebugCamera'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(41,2): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,17): error C2061: 構文エラー: 識別子 'Skydome'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,16): error C2061: 構文エラー: 識別子 'Player'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,23): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,22): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,39): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,30): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,47): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,22): error C2061: 構文エラー: 識別子 'MapChipField'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(55,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(84,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(85,2): error C3861: 'GenerateBlocks': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(59,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(88,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(89,30): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,39): error C2061: 構文エラー: 識別子 'WorldTransform'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(90,32): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(66,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(92,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(67,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(94,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(68,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(70,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,8): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,2): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,54): error C2653: 'MapChipType': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,21): error C2061: 構文エラー: 識別子 'DebugCamera'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,67): error C2065: 'kBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,17): error C2061: 構文エラー: 識別子 'Skydome'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,5): error C2065: 'WorldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,21): error C2065: 'worldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,23): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,42): error C2061: 構文エラー: 識別子 'WorldTransform'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,39): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(100,5): error C2065: 'worldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(101,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,22): error C2061: 構文エラー: 識別子 'MapChipField'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(101,35): error C2065: 'worldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(84,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(85,2): error C3861: 'GenerateBlocks': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,49): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(88,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(108,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(89,30): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(111,6): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(90,32): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,7): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(92,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(94,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,8): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,31): warning C4805: '==': 演算中の 'unknown-type' 型と 'bool' 型の混用は安全ではありません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,54): error C2653: 'MapChipType': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,67): error C2065: 'kBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(113,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,5): error C2065: 'WorldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(115,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,21): error C2065: 'worldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(120,6): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,42): error C2061: 構文エラー: 識別子 'WorldTransform'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(122,3): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(100,5): error C2065: 'worldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(101,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,29): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(101,35): error C2065: 'worldTransform': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,49): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(108,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(111,6): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,3): error C1003: プログラム内のエラーが 100 個を超えました。コンパイルは中断されます。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,7): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,31): warning C4805: '==': 演算中の 'unknown-type' 型と 'bool' 型の混用は安全ではありません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(113,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(115,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(120,6): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(122,3): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,29): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,3): error C1003: プログラム内のエラーが 100 個を超えました。コンパイルは中断されます。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,11): error C2146: 構文エラー: ';' が、識別子 'MakeAffineMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateXMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateYMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateZMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,11): error C2146: 構文エラー: ';' が、識別子 'Multiply' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,12): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,25): warning C4508: 'GameScene': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,9): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,9): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,63): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,37): error C2530: 'worldTransformBlockLine': 参照が初期化されずに宣言されています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,61): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,84): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(15,4): warning C4150: 'WorldTransform' 型を削除するため delete 演算子が呼び出されましたが、定義がありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(19,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,9): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,9): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(24,1): warning C4508: '{dtor}': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(26,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,2): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,14): error C2653: 'DirectXCommon': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,29): error C3861: 'GetInstance': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(29,2): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(30,2): error C2065: 'audio_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(33,2): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,2): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,2): error C2065: 'modelBlock_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,2): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(39,2): error C2065: 'worldTransform_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(41,2): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,16): error C2061: 構文エラー: 識別子 'Player'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,22): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,30): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,47): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(55,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(59,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,53): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(66,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(67,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(68,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(70,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,2): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,21): error C2061: 構文エラー: 識別子 'DebugCamera'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,17): error C2061: 構文エラー: 識別子 'Skydome'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,23): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,39): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,22): error C2061: 構文エラー: 識別子 'MapChipField'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(84,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(85,2): error C3861: 'GenerateBlocks': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(88,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(89,30): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(90,32): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(92,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(94,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,8): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,54): error C2653: 'MapChipType': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,67): error C2065: 'kBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,56): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(100,5): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(101,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,49): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(108,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(111,6): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,7): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,31): warning C4805: '==': 演算中の 'unknown-type' 型と 'bool' 型の混用は安全ではありません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(113,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(115,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(120,6): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(122,3): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,29): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,35): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(126,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(129,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(133,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,62): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,60): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,83): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,11): error C2146: 構文エラー: ';' が、識別子 'MakeAffineMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(142,4): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateXMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(144,4): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(149,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateYMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(152,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(155,43): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateZMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(159,2): error C2653: 'Sprite': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(159,10): error C3861: 'PreDraw': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(166,2): error C2653: 'Sprite': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(166,2): error C1003: プログラム内のエラーが 100 個を超えました。コンパイルは中断されます。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,11): error C2146: 構文エラー: ';' が、識別子 'Multiply' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,12): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,25): warning C4508: 'GameScene': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,9): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,9): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,63): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,37): error C2530: 'worldTransformBlockLine': 参照が初期化されずに宣言されています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,61): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,84): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(15,4): warning C4150: 'WorldTransform' 型を削除するため delete 演算子が呼び出されましたが、定義がありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(19,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,9): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,9): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(24,1): warning C4508: '{dtor}': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(26,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,2): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,14): error C2653: 'DirectXCommon': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,29): error C3861: 'GetInstance': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(29,2): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(30,2): error C2065: 'audio_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(33,2): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,2): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,2): error C2065: 'modelBlock_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,2): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(39,2): error C2065: 'worldTransform_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(41,2): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,16): error C2061: 構文エラー: 識別子 'Player'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,22): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,30): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,47): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(55,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(59,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,53): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(66,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(67,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(68,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(70,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,2): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,21): error C2061: 構文エラー: 識別子 'DebugCamera'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,17): error C2061: 構文エラー: 識別子 'Skydome'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,23): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,39): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,22): error C2061: 構文エラー: 識別子 'MapChipField'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(84,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(85,2): error C3861: 'GenerateBlocks': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(88,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(89,30): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(90,32): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(92,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(94,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,8): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,54): error C2653: 'MapChipType': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,67): error C2065: 'kBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,56): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(100,5): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(101,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,49): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(108,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(111,6): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,7): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,31): warning C4805: '==': 演算中の 'unknown-type' 型と 'bool' 型の混用は安全ではありません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(113,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(115,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(120,6): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(122,3): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,29): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,35): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(126,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(129,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(133,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,62): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,60): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,83): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(142,4): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(144,4): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(149,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(152,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(155,43): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(159,2): error C2653: 'Sprite': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(159,10): error C3861: 'PreDraw': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(166,2): error C2653: 'Sprite': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(166,2): error C1003: プログラム内のエラーが 100 個を超えました。コンパイルは中断されます。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(3,11): error C2146: 構文エラー: ';' が、識別子 'MakeAffineMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(5,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateXMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(7,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateYMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(9,11): error C2146: 構文エラー: ';' が、識別子 'MakeRotateZMatrix' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,1): error C2086: 'int Matrix4x4': 再定義されました。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\myMath.h(11,11): error C2146: 構文エラー: ';' が、識別子 'Multiply' の前に必要です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,12): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(7,25): warning C4508: 'GameScene': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,1): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(9,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,9): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(10,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,9): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(11,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,63): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,37): error C2530: 'worldTransformBlockLine': 参照が初期化されずに宣言されています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,61): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(13,84): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(15,4): warning C4150: 'WorldTransform' 型を削除するため delete 演算子が呼び出されましたが、定義がありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(19,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,9): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(21,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,9): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(23,2): error C2541: 'delete': ポインターではないオブジェクトを削除することはできません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(24,1): warning C4508: '{dtor}': 関数に戻り値の型が指定されていません。戻り値を void 型と見なします。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(26,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(28,2): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(29,2): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(30,2): error C2065: 'audio_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(33,2): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(35,2): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(36,2): error C2065: 'modelBlock_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(37,2): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(39,2): error C2065: 'worldTransform_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(41,2): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(44,16): error C2061: 構文エラー: 識別子 'Player'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,22): error C2065: 'model_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,30): error C2065: 'textureHandle_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(46,47): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(55,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(59,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(65,53): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(66,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(67,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(68,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(70,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,2): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(76,21): error C2061: 構文エラー: 識別子 'DebugCamera'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(79,17): error C2061: 構文エラー: 識別子 'Skydome'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,23): error C2065: 'modelSkydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(80,39): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(83,22): error C2061: 構文エラー: 識別子 'MapChipField'
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(84,2): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(85,2): error C3861: 'GenerateBlocks': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(88,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(89,30): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(90,32): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(92,2): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(94,3): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,8): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,54): error C2653: 'MapChipType': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(98,67): error C2065: 'kBlock': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(99,56): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(100,5): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(101,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,5): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(102,49): error C2065: 'mapChipField_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(108,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(111,6): error C2065: 'input_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,7): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(112,31): warning C4805: '==': 演算中の 'unknown-type' 型と 'bool' 型の混用は安全ではありません
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(113,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(115,4): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(120,6): error C2065: 'isDebugCameraActive_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(122,3): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(123,29): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(124,35): error C2065: 'debugCamera_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(126,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(129,3): error C2065: 'viewProjection_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(133,2): error C2065: 'player_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,62): error C2065: 'worldTransformBlocks_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,60): error C2143: 構文エラー: ';' が ':' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(136,83): error C2143: 構文エラー: ';' が ')' の前にありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(142,4): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(144,4): error C2027: 認識できない型 'WorldTransform' が使われています。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(149,2): error C2065: 'skydome_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(152,6): error C2653: 'GameScene': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(155,43): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(159,2): error C2653: 'Sprite': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(159,10): error C3861: 'PreDraw': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(166,2): error C2653: 'Sprite': 識別子がクラス名でも名前空間名でもありません。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(166,10): error C3861: 'PostDraw': 識別子が見つかりませんでした
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(168,2): error C2065: 'dxCommon_': 定義されていない識別子です。
+C:\Users\zhong\Desktop\AL\0702_AL\DirectXGame\3d\ViewProjection.h(168,2): error C1003: プログラム内のエラーが 100 個を超えました。コンパイルは中断されます。

@@ -1,91 +1,211 @@
-#pragma once
+#include "GameScene.h"
+#include "TextureManager.h"
+#include "myMath.h"
+#include <cassert>
+#include <map>
 
-#include "Matrix4x4.h"
-#include "Vector3.h"
-#include <d3d12.h>
-#include <type_traits>
-#include <wrl.h>
+GameScene::GameScene() {}
 
-// 定数バッファ用データ構造体
-struct ConstBufferDataViewProjection {
-	Matrix4x4 view;       // ワールド → ビュー変換行列
-	Matrix4x4 projection; // ビュー → プロジェクション変換行列
-	Vector3 cameraPos;    // カメラ座標（ワールド座標）
-};
+GameScene::~GameScene() {
+	delete model_;
+	delete modelSkydome_;
 
-/// <summary>
-/// ビュープロジェクション変換データ
-/// </summary>
-class ViewProjection {
-public:
-#pragma region ビュー行列の設定
-	// X,Y,Z軸回りのローカル回転角
-	Vector3 rotation_ = {0, 0, 0};
-	// ローカル座標
-	Vector3 translation_ = {0, 0, -50};
+	for (std::vector<WorldTransform*>& worldTransformBlockLine : worldTransformBlocks_) {
+		for (WorldTransform* worldTransformBlock : worldTransformBlockLine) {
+			delete worldTransformBlock;
+		}
+	}
+
+	worldTransformBlocks_.clear();
+
+	delete debugCamera_;
+
+	delete mapChipField_;
+}
+
+void GameScene::Initialize() {
+
+	dxCommon_ = DirectXCommon::GetInstance();
+	input_ = Input::GetInstance();
+	audio_ = Audio::GetInstance();
+
+	// ファイル名を指定してテクスチャを読み込む
+	textureHandle_ = TextureManager::Load("cube/cube.jpg");
+	// 3Dモデルの生成
+	model_ = Model::Create();
+	modelBlock_ = Model::Create();
+	modelSkydome_ = Model::CreateFromOBJ("sphere", true);
+	// ワールドトランスフォームの初期化
+	worldTransform_.Initialize();
+	// ビュープロジェクションの初期化
+	viewProjection_.Initialize();
+
+	// 自キャラの生成
+	player_ = new Player();
+	// 自キャラの初期化
+	player_->Initialize(model_, textureHandle_, &viewProjection_);
+
+	// 要素数
+	const uint32_t kNumBlockVirtical = 10;
+	const uint32_t kNumBlockHorizontal = 20;
+	// ブロック1個分の横幅
+	const float kBlockWidth = 2.0f;
+	const float kBlockHeight = 2.0f;
+	// 要素数を変更する
+	worldTransformBlocks_.resize(kNumBlockVirtical);
+
+	// キューブの生成
+	for (uint32_t i = 0; i < kNumBlockVirtical; ++i) {
+		worldTransformBlocks_[i].resize(kNumBlockHorizontal);
+	}
+
+	for (uint32_t i = 0; i < kNumBlockVirtical; ++i) {
+		for (uint32_t j = 0; j < kNumBlockHorizontal; ++j) {
+			if (j % 2 == (i % 2)) {
+				worldTransformBlocks_[i][j] = new WorldTransform();
+				worldTransformBlocks_[i][j]->Initialize();
+				worldTransformBlocks_[i][j]->translation_.x = kBlockWidth * j;
+				worldTransformBlocks_[i][j]->translation_.y = kBlockHeight * i;
+			} else {
+				worldTransformBlocks_[i][j] = nullptr;
+			}
+		}
+	}
+
+	// デバッグカメラの生成
+	debugCamera_ = new DebugCamera(1280, 720);
+
+	// 天球
+	skydome_ = new Skydome();
+	skydome_->Initialize(modelSkydome_, &viewProjection_);
+
+	// マップチップ
+	mapChipField_ = new MapChipField;
+	mapChipField_->LoadMapChipCsv("Resources/map.csv");
+	GenerateBlocks();
+}
+
+void GameScene::GenerateBlocks() {
+	uint32_t numBlockVirtical = mapChipField_->GetNumBlockVirtical();
+	uint32_t numBlockHorizontal = mapChipField_->GetNumBlockHorizontal();
+
+	worldTransformBlocks_.resize(numBlockVirtical);
+	for (uint32_t i = 0; i < numBlockVirtical; ++i) {
+		worldTransformBlocks_[i].resize(numBlockHorizontal);
+	}
+	for (uint32_t i = 0; i < numBlockVirtical; ++i) {
+		for (uint32_t j = 0; j < numBlockHorizontal; ++j) {
+			if (mapChipField_->GetMapChipTypeByIndex(j, i) == MapChipType::kBlock) {
+				WorldTransform* worldTransform = new WorldTransform();
+				worldTransform->Initialize();
+				worldTransformBlocks_[i][j] = worldTransform;
+				worldTransformBlocks_[i][j]->translation_ = mapChipField_->GetMapChipPositionByIndex(j, i);
+			}
+		}
+	}
+}
+
+void GameScene::Update() {
+
+#ifdef _DEBUG
+	if (input_->TriggerKey(DIK_SPACE)) {
+		if (isDebugCameraActive_ == true)
+			isDebugCameraActive_ = false;
+		else
+			isDebugCameraActive_ = true;
+	}
+#endif
+
+	// カメラ処理
+	if (isDebugCameraActive_) {
+		// デバッグカメラの更新
+		debugCamera_->Update();
+		viewProjection_.matView = debugCamera_->GetViewProjection().matView;
+		viewProjection_.matProjection = debugCamera_->GetViewProjection().matProjection;
+		// ビュープロジェクション行列の転送
+		viewProjection_.TransferMatrix();
+	} else {
+		// ビュープロジェクション行列の更新と転送
+		viewProjection_.UpdateMatrix();
+	}
+
+	// 自キャラの更新
+	player_->Update();
+
+	// 縦横ブロック更新
+	for (std::vector<WorldTransform*> worldTransformBlockTate : worldTransformBlocks_) {
+		for (WorldTransform* worldTransformBlockYoko : worldTransformBlockTate) {
+			if (!worldTransformBlockYoko)
+				continue;
+
+			// アフィン変換行列の作成
+			worldTransformBlockYoko->UpdateMatrix();
+
+			worldTransformBlockYoko->TransferMatrix();
+		}
+	}
+
+	// 天球
+	skydome_->Update();
+}
+
+void GameScene::Draw() {
+
+	// コマンドリストの取得
+	ID3D12GraphicsCommandList* commandList = dxCommon_->GetCommandList();
+
+#pragma region 背景スプライト描画
+	// 背景スプライト描画前処理
+	Sprite::PreDraw(commandList);
+
+	/// <summary>
+	/// ここに背景スプライトの描画処理を追加できる
+	/// </summary>
+
+	// スプライト描画後処理
+	Sprite::PostDraw();
+	// 深度バッファクリア
+	dxCommon_->ClearDepthBuffer();
 #pragma endregion
 
-#pragma region 射影行列の設定
-	// 垂直方向視野角
-	float fovAngleY = 45.0f * 3.141592654f / 180.0f;
-	// ビューポートのアスペクト比
-	float aspectRatio = (float)16 / 9;
-	// 深度限界（手前側）
-	float nearZ = 0.1f;
-	// 深度限界（奥側）
-	float farZ = 1000.0f;
+#pragma region 3Dオブジェクト描画
+	// 3Dオブジェクト描画前処理
+	Model::PreDraw(commandList);
+
+	/// <summary>
+	/// ここに3Dオブジェクトの描画処理を追加できる
+	/// </summary>
+	// 3Dモデル描画
+	//	model_->Draw(worldTransform_, viewProjection_, textureHandle_);
+	model_->Draw(worldTransform_, viewProjection_);
+	// 自キャラの描画
+	//	player_->Draw();
+	skydome_->Draw();
+
+	// 縦横ブロック描画
+	for (std::vector<WorldTransform*> worldTransformBlockTate : worldTransformBlocks_) {
+		for (WorldTransform* worldTransformBlockYoko : worldTransformBlockTate) {
+			if (!worldTransformBlockYoko)
+				continue;
+
+			modelBlock_->Draw(*worldTransformBlockYoko, viewProjection_);
+		}
+	}
+
+	// 3Dオブジェクト描画後処理
+	Model::PostDraw();
 #pragma endregion
 
-	// ビュー行列
-	Matrix4x4 matView;
-	// 射影行列
-	Matrix4x4 matProjection;
-
-	ViewProjection() = default;
-	~ViewProjection() = default;
+#pragma region 前景スプライト描画
+	// 前景スプライト描画前処理
+	Sprite::PreDraw(commandList);
 
 	/// <summary>
-	/// 初期化
+	/// ここに前景スプライトの描画処理を追加できる
 	/// </summary>
-	void Initialize();
-	/// <summary>
-	/// 定数バッファ生成
-	/// </summary>
-	void CreateConstBuffer();
-	/// <summary>
-	/// マッピングする
-	/// </summary>
-	void Map();
-	/// <summary>
-	/// 行列を更新する
-	/// </summary>
-	void UpdateMatrix();
-	/// <summary>
-	/// 行列を転送する
-	/// </summary>
-	void TransferMatrix();
-	/// <summary>
-	/// ビュー行列を更新する
-	/// </summary>
-	void UpdateViewMatrix();
-	/// <summary>
-	/// 射影行列を更新する
-	/// </summary>
-	void UpdateProjectionMatrix();
-	/// <summary>
-	/// 定数バッファの取得
-	/// </summary>
-	/// <returns>定数バッファ</returns>
-	const Microsoft::WRL::ComPtr<ID3D12Resource>& GetConstBuffer() const { return constBuffer_; }
 
-private:
-	// 定数バッファ
-	Microsoft::WRL::ComPtr<ID3D12Resource> constBuffer_;
-	// マッピング済みアドレス
-	ConstBufferDataViewProjection* constMap = nullptr;
-	// コピー禁止
-	ViewProjection(const ViewProjection&) = delete;
-	ViewProjection& operator=(const ViewProjection&) = delete;
-};
+	// スプライト描画後処理
+	Sprite::PostDraw();
 
-static_assert(!std::is_copy_assignable_v<ViewProjection>);
+#pragma endregion
+}
