@@ -1,9 +1,2 @@
-﻿  CameraController.cpp
-  DeathParticles.cpp
-  Enemy.cpp
-  main.cpp
-  myMath.cpp
-  Player.cpp
-  GameScene.cpp
-  WorldTransformEX.cpp
+﻿  main.cpp
   DirectXGame.vcxproj -> C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\DirectXGame.exe
