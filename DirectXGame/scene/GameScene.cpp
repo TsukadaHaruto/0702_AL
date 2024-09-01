@@ -24,7 +24,7 @@ GameScene::~GameScene() {
 	delete modelPlayer_;
 	delete modelBlock_;
 	delete debugCamera_;
-	delete modelSkydome_;
+	/*delete modelSkydome_;*/
 	delete mapChipField_;
 	delete cameraController;
 }
@@ -42,7 +42,7 @@ void GameScene::Initialize() {
 	modelPlayer_ = Model::CreateFromOBJ("player");
 	modelEnemy_ = Model::CreateFromOBJ("enemy");
 	modelBlock_ = Model::CreateFromOBJ("block");
-	modelSkydome_ = Model::CreateFromOBJ("sphere", true);
+	/*modelSkydome_ = Model::CreateFromOBJ("sphere", true);*/
 	modelDeathParticle_ = Model::CreateFromOBJ("deathParticle", true);
 
 	// マップチップフィールドの生成
@@ -153,7 +153,7 @@ void GameScene::Draw() {
 	/// ここに3Dオブジェクトの描画処理を追加できる
 	/// </summary>
 	// 天球の描画
-	modelSkydome_->Draw(worldTransformSkydome_, viewProjection_);
+	/*modelSkydome_->Draw(worldTransformSkydome_, viewProjection_);*/
 
 	for (std::vector<WorldTransform*> worldTransformBlockLine : worldTransformBlocks_) {
 		for (WorldTransform*& worldTransformBlock : worldTransformBlockLine) {

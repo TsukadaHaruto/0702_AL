@@ -1,1 +1,5 @@
-﻿  DirectXGame.vcxproj -> C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\DirectXGame.exe
+﻿  Enemy.cpp
+  main.cpp
+  myMath.cpp
+  GameScene.cpp
+  DirectXGame.vcxproj -> C:\Users\zhong\Desktop\AL3new\0702_AL\Generated\Outputs\Debug\DirectXGame.exe
